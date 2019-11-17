@@ -1,4 +1,4 @@
-use assert_cmd::prelude::*;
+use assert_cmd::prelude::{CommandCargoExt, OutputAssertExt, OutputOkExt};
 use kvs::KvStore;
 use predicates::str::contains;
 use std::process::Command;
