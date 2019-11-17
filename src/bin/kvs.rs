@@ -7,9 +7,9 @@ use clap::{Arg, App, SubCommand};
 fn main() {
     //println!("Hello, world!")
     let matches = App::new("kvs")
-            .version(crate_version!())
-            .about("Basic In-Memory Key Value Store")
-            .author("dbaldwin: <derrick.baldwin@email-address.com>")
+            .version(env!("CARGO_PKG_VERSION"))
+            .about(env!("CARGO_PKG_DESCRIPTION"))
+            .author(env!("CARGO_PKG_AUTHORS"))
             .subcommand( // kvs set <KEY> <VALUE>
                 SubCommand::with_name("set")
                     .about("Set the value of a string key to a string")
